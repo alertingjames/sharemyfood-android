@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">ShareMyFood</string>
+
+    <!-- facebook login -->
+    <string name="facebook_app_id">2426686327420047</string>
+    <string name="fb_login_protocol_scheme">fb2426686327420047</string>
+
+    <string name="sun">By sharing food generously, you will be blessed with great abundance and prosperity.</string>
+    <string name="mon">The more we give, the more we have.</string>
+    <string name="tue">Remember that happiest people are not those getting more, but who are giving more.</string>
+    <string name="wed">No one who shared food, had to live hungry.</string>
+    <string name="thu">If you got surplus food, it\'s because you are privileged.</string>
+    <string name="fri">The return we reap by sharing food is not visible.</string>
+    <string name="sat">If you find it difficult to be generous with your wallet, start by sharing your food. Both are equal.</string>
+
+    <string name="signin_title">Join over 1 million\nneighbours!</string>
+    <string name="signin_content">Together we\'re making food\nwaste history</string>
+    <string name="signin_already">Already have an account?</string>
+    <string name="join_facebook">Login with Facebook</string>
+    <string name="join_email">Login with Google</string>
+    <string name="food">Food</string>
+    <string name="addfood">Share My Food</string>
+    <string name="orderHistory">Message</string>
+    <string name="myaccount">My Account</string>
+    <string name="dashboard">DashBoard</string>
+    <string name="noty">Notifications</string>
+    <string name="set_location">Set Pick-Up details</string>
+    <string name="transaction">Transaction</string>
+    <string name="setting">Settings</string>
+    <string name="ambassador">Volunteers</string>
+    <string name="feedback">Feedback</string>
+    <string name="help">Help</string>
+    <string name="logout">Logout</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="food_noresult">No listings near you\nright now - Why don\'t you something share?</string>
+    <string name="food_yesresult">All listings near you right now</string>
+    <string name="message_noresult">No received share History</string>
+    <string name="message_yesresult">New messages has arrived</string>
+    <string name="dashHtext">Shared foods ago 30days</string>
+    <string name="dashVtext">All shared foods</string>
+    <string name="noresult">No results for your foods</string>
+    <string name="takePhoto">Take a photo</string>
+    <string name="choose_pickup_locations">Choose pickup location</string>
+    <string name="set_pickup_location">Set pickup location</string>
+    <string name="setpickupconfirm">Are you sure confirm?</string>
+    <string name="deleteconfirm">Are you sure you want to delete?</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="verified">Verified</string>
+    <string name="unverified">Unverified</string>
+    <string name="saveaccount">Save Account</string>
+    <string name="fooddetail">Food Detail</string>
+    <string name="please_rate_out_of_5_stars">Please rate it out of 5 stars</string>
+    <string name="write_feedback">Please write your feedback</string>
+    <string name="become_ambassador">Become an ambassador\nof your area</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

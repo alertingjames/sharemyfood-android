@@ -1,0 +1,131 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.sharemyfood"
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    //ButterKnife
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    // KProgess Loading Dialog
+    implementation 'com.kaopiz:kprogresshud:1.2.0'
+
+    //ButterKnife
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+
+    //Email Validation
+    implementation 'com.spothero.emailvalidator:EmailValidator:1.0.0@aar'
+
+    //RecyclerView
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+
+    //Round Image
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+
+    // CardView
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    // Network Communicatoin
+    implementation 'com.squareup.okhttp3:okhttp:4.0.1'
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    ////// Network - Android networking
+    implementation 'com.amitshekhar.android:android-networking:1.0.2'
+    implementation 'com.amitshekhar.android:jackson-android-networking:1.0.2'
+
+    // If you have a problem with Glide, please use the same Glide version or simply open an issue
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+    //Easy Preference
+    implementation 'com.iamhabib:easy-preference:1.0.1'
+
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:28.0.0'
+
+    // DrawMenu headerLayout
+    implementation 'androidx.drawerlayout:drawerlayout:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0-beta01'
+
+    /// firebase
+    implementation 'com.google.firebase:firebase-analytics:17.0.1'
+    implementation 'com.google.firebase:firebase-core:16.0.9'
+    implementation 'com.firebase:firebase-client-android:+'
+    implementation 'com.google.firebase:firebase-auth:17.0.0'
+    implementation 'com.google.firebase:firebase-storage:17.0.0'
+    implementation 'com.google.firebase:firebase-messaging:19.0.0'
+
+    /////////////google maps
+    implementation 'com.google.android.gms:play-services-maps:16.1.0'
+    implementation 'com.google.android.gms:play-services-location:15.0.1'
+    implementation 'com.google.code.gson:gson:2.7'
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.4.1'
+    implementation 'io.nlopez.smartlocation:library:3.3.1'
+    implementation 'com.karumi:dexter:5.0.0'
+    implementation 'com.google.android.gms:play-services-base:16.1.0'
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
+    implementation 'com.google.android.gms:play-services-ads:16.0.0'
+    implementation 'com.google.maps.android:android-maps-utils:0.5+'
+
+    /////// image Picker
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.5.+'
+
+    //// imageViewer
+    implementation 'com.github.chrisbanes:photoView:2.3.0'
+
+    //// faceBook
+    implementation 'com.facebook.android:facebook-android-sdk:[5,6)'
+
+    //////google login
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+    implementation 'com.android.support:multidex:1.0.3'
+
+    ////Loading progress Bar
+    implementation 'com.wang.avi:library:1.0.5'
+
+    ////realtime blur view
+    implementation 'com.github.mmin18:realtimeblurview:1.2.1'
+
+    //implementation 'com.android.support:recyclerview-v7:22.2.0'
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    /// app icon badger
+    implementation 'me.leolin:ShortcutBadger:1.1.22@aar'
+
+    ///// Bubble View
+    implementation 'com.github.MasayukiSuda:BubbleLayout:v1.2.1'
+}
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background"
+        android:scaleType="centerCrop"
+        android:tint="#69000000"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:orientation="vertical"
+                tools:context=".main.SigninActivity"
+                android:gravity="center_horizontal"
+                android:id="@+id/lin_signin"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="140dp"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:fontFamily="@font/hinted_geomanist_bold"
+                    android:textSize="30sp"/>
+
+                <TextView
+                    android:id="@+id/day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mon"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:textScaleX="1.2"
+                    android:lineSpacingExtra="10dp"
+                    android:layout_marginTop="100dp"
+                    android:fontFamily="@font/hinted_geomanist_bold"
+                    android:textSize="@dimen/fab_margin_big"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/signin_content"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:visibility="invisible"
+                    android:lineSpacingExtra="8dp"
+                    android:fontFamily="@font/hinted_geomanist_book"
+                    android:textSize="@dimen/fab_margin"/>
+
+
+                <Button
+                    android:id="@+id/tv_facebook_signin"
+                    android:text="@string/join_facebook"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center"
+                    android:textSize="@dimen/fab_text_size_smaller"
+                    android:background ="@drawable/sh_text_view_lbule"
+                    style="@style/Customtvbutton"/>
+                <Button
+                    android:id="@+id/tv_email_signin"
+                    android:text="@string/join_email"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="@dimen/fab_text_size_smaller"
+                    android:gravity="center"
+                    android:background ="@drawable/sh_text_view_lbule"
+                    style="@style/Customtvbutton"/>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/loading_bar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:indicator="LineScaleParty"
+        app:indicator_color="#F53700" />
+
+</FrameLayout>

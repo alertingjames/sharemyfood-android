@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "104685883778",
+    "firebase_url": "https://sharemyfood-1567613607368.firebaseio.com",
+    "project_id": "sharemyfood-1567613607368",
+    "storage_bucket": "sharemyfood-1567613607368.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:104685883778:android:280f8926cdaee6a42e3f9b",
+        "android_client_info": {
+          "package_name": "com.sharemyfood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "104685883778-p8kt31tg34rq5ob5g3isc6bnlr6370s4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sharemyfood",
+            "certificate_hash": "f423203250abf2286669c857cdc2978312933426"
+          }
+        },
+        {
+          "client_id": "104685883778-hr66nptuortvka8chfj6ucjsbipg2ns3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA26p5zBG2M1txs1_XhSCZfVnu5v1FPZ6k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "104685883778-hr66nptuortvka8chfj6ucjsbipg2ns3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

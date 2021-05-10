@@ -1,0 +1,25 @@
+<resources>
+    <dimen name="fab_margin_smallest">5dp</dimen>
+    <dimen name="fab_margin_smaller">8dp</dimen>
+    <dimen name="fab_margin_small">10dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="fab_margin_big">20dp</dimen>
+    <dimen name="fab_margin_biger">24dp</dimen>
+    <dimen name="fab_margin_bigest">32dp</dimen>
+
+    <dimen name="fab_padding_smallest">5dp</dimen>
+    <dimen name="fab_padding_smaller">8dp</dimen>
+    <dimen name="fab_padding_small">10dp</dimen>
+    <dimen name="fab_padding">16dp</dimen>
+    <dimen name="fab_padding_big">20dp</dimen>
+    <dimen name="fab_padding_biger">24dp</dimen>
+    <dimen name="fab_padding_bigest">32dp</dimen>
+
+    <dimen name="fab_text_size_smallest">12dp</dimen>
+    <dimen name="fab_text_size_smaller">14dp</dimen>
+    <dimen name="fab_text_size_small">16dp</dimen>
+    <dimen name="fab_text_size">20dp</dimen>
+    <dimen name="fab_text_size_big">22dp</dimen>
+    <dimen name="fab_text_size_biger">24dp</dimen>
+    <dimen name="fab_text_size_bigest">26dp</dimen>
+</resources>

@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:id="@+id/contain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@color/colorPrimaryDark">
+                <ImageView
+                    android:id="@+id/menu_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/menu" />
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/home_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Shared Foods"
+                        android:textSize="20dp"
+                        android:textColor="@color/colorWhite"
+                        android:fontFamily="@font/hinted_geomanist_book"/>
+                    <!--<SearchView
+                        android:id="@+id/edit_search"
+                        android:visibility="gone"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:searchIcon="@drawable/search"
+                        android:theme="@style/SearchViewStyle"
+                        android:iconifiedByDefault="false"
+                        android:queryHint="Search..."/>-->
+                    <EditText
+                        android:id="@+id/edit_search"
+                        android:visibility="gone"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:searchIcon="@drawable/search"
+                        android:drawablePadding="10dp"
+                        android:background="@color/colorTransparent"
+                        android:drawableLeft="@drawable/search"
+                        android:theme="@style/SearchViewStyle"
+                        android:iconifiedByDefault="false"
+                        android:queryHint="Search..."/>
+                </LinearLayout>
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <ImageView
+                    android:id="@+id/img_search"
+                    android:onClick="onSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/search" />
+                <ImageView
+                    android:id="@+id/filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="10dp"
+                    android:onClick="goToFilter"
+                    android:background="@drawable/filter" />
+
+
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/fragement_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ScrollView
+                    android:id="@+id/food_fragement"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tv_foodresult"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:layout_margin="20dp"
+                            android:gravity="center"
+                            android:text="@string/food_noresult"
+                            android:textSize="@dimen/fab_text_size"
+                            android:textColor="@color/colorLightBlack"/>
+                        <LinearLayout
+                            android:id="@+id/linear_food_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"/>
+                    </LinearLayout>
+                </ScrollView>
+                <ScrollView
+                    android:id="@+id/message_fragement"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tv_messageresult"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:layout_margin="20dp"
+                            android:gravity="center"
+                            android:text="@string/message_noresult"
+                            android:textSize="@dimen/fab_text_size"
+                            android:textColor="@color/colorLightBlack"/>
+                        <LinearLayout
+                            android:id="@+id/linear_message_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"/>
+                    </LinearLayout>
+                </ScrollView>
+            </FrameLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/white_gradient_background"/>
+
+
+        <ImageView
+            android:id="@+id/newAddButton"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="3dp"
+            android:layout_gravity="bottom|center"
+            android:src="@drawable/add"
+            android:padding="5dp"
+            android:scaleX="0.9"
+            android:scaleY="0.9"
+            android:layout_marginBottom="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/viewBottom"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/bottombar"
+            android:focusableInTouchMode="true"
+            android:touchscreenBlocksFocus="true"
+            android:layout_alignParentBottom="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginRight="40dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/foodButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.8" android:scaleY="0.8"
+                    android:src="@drawable/food_red"/>
+                <TextView
+                    android:id="@+id/tv_food"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPunc"
+                    android:textSize="12sp"
+                    android:text="@string/food"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="40dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/messageButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:src="@drawable/message" />
+                    <FrameLayout
+                        android:id="@+id/notimark"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-15dp">
+                        <ImageView
+                            android:id="@+id/img_noty"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:scaleType="fitXY"
+                            android:layout_gravity="center"
+                            android:src="@drawable/notyicon"/>
+                        <TextView
+                            android:id="@+id/tv_noty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="8sp"
+                            android:textColor="@color/colorWhite"
+                            android:text="1"/>
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="@string/orderHistory"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/layout"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#49060e58"/>
+
+        <LinearLayout
+            android:id="@+id/radiusLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:layout_margin="3dp"
+            android:touchscreenBlocksFocus="true"
+            android:focusable="true"
+            android:visibility="gone"
+            android:focusableInTouchMode="true"
+            android:filterTouchesWhenObscured="true"
+            android:paddingTop="10dp"
+            android:orientation="vertical">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:textColor="#515151"
+                    android:text="Select Nearby Range"/>
+                <ImageButton
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_margin="8dp"
+                    android:layout_gravity="right"
+                    android:onClick="dismissRadiusLayout"
+                    android:background="@android:drawable/ic_menu_close_clear_cancel"/>
+            </FrameLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Radius"
+                    android:textColor="#515151"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/radius"
+                    android:layout_width="55dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:hint="0"
+                    android:visibility="visible"
+                    android:textStyle="bold"
+                    android:background="@drawable/gray_stroke_rect"
+                    android:layout_marginRight="10dp"
+                    android:textColor="#515151"
+                    android:textSize="22sp"/>
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10km"
+                    android:layout_marginRight="10dp"
+                    android:textColor="#515151"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:min="10"
+                android:max="100"
+                android:indeterminate="false"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_alldeals"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:background="@drawable/sh_text_view_lbule"
+                    android:onClick="getAllFood"
+                    android:text="All Food"/>
+
+                <Button
+                    android:id="@+id/btn_done"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:textAllCaps="false"
+                    android:layout_marginLeft="50dp"
+                    android:textColor="#fff"
+                    android:background="@drawable/sh_text_view_lbule"
+                    android:onClick="done"
+                    android:text="Done"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/loading_bar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:indicator="LineScaleParty"
+            app:indicator_color="#F53700" />
+
+
+
+        <com.daasuu.bl.BubbleLayout
+            android:id="@+id/bl_filter"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:visibility="gone"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="right"
+            android:padding="8dp"
+            app:bl_arrowDirection="top"
+            app:bl_strokeColor="@color/colorPunc"
+            app:bl_arrowHeight="8dp"
+            app:bl_arrowPosition="120dp"
+            app:bl_arrowWidth="8dp"
+            app:bl_cornersRadius="6dp"
+            app:bl_strokeWidth="1dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginRight="4dp"
+                android:text="See all the foods shared near you"
+                android:textColor="@color/colorPrimaryDark" />
+
+        </com.daasuu.bl.BubbleLayout>
+
+
+
+        <com.daasuu.bl.BubbleLayout
+            android:id="@+id/bl_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="5dp"
+            android:visibility="gone"
+            android:padding="8dp"
+            app:bl_arrowDirection="bottom"
+            app:bl_arrowHeight="8dp"
+            app:bl_arrowPosition="65dp"
+            app:bl_arrowWidth="8dp"
+            app:bl_cornersRadius="6dp"
+            app:bl_strokeColor="@color/colorPunc"
+            app:bl_strokeWidth="1dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="4dp"
+                android:text="Show all Food shared"
+                android:textColor="@color/colorPrimaryDark" />
+
+        </com.daasuu.bl.BubbleLayout>
+
+
+        <com.daasuu.bl.BubbleLayout
+            android:id="@+id/bl_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="26dp"
+            android:layout_marginLeft="90dp"
+            android:layout_gravity="bottom|center"
+            android:padding="8dp"
+            android:visibility="gone"
+            app:bl_arrowDirection="left_center"
+            app:bl_arrowHeight="12dp"
+            app:bl_arrowPosition="-5dp"
+            app:bl_strokeColor="@color/colorPunc"
+            app:bl_arrowWidth="8dp"
+            app:bl_cornersRadius="6dp"
+            app:bl_strokeWidth="1dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="4dp"
+                android:text="Share my Food"
+                android:textColor="@color/colorPrimaryDark" />
+
+        </com.daasuu.bl.BubbleLayout>
+    </FrameLayout>
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
